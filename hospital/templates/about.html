@@ -1,0 +1,60 @@
+{% extends 'navigationbar.html' %}
+{% load static %}
+
+{% block body %}
+
+<div class="container" style="min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 3rem 0;">
+    
+    <div class="card shadow-lg p-5" style="max-width: 800px; border-radius: 32px; background: white;">
+        
+        <div class="text-center mb-4">
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); width: 80px; height: 80px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <i class="fas fa-heartbeat" style="font-size: 2.5rem; color: white;"></i>
+            </div>
+            <h2 class="mb-2" style="font-weight: 800; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; background-clip: text; color: transparent;">About Us</h2>
+            <p class="text-muted">Your Trusted Healthcare Management Partner</p>
+        </div>
+
+        <hr style="margin: 1.5rem 0;">
+
+        <p style="font-size: 1rem; line-height: 1.8; color: var(--dark);">
+            This is a <strong style="color: var(--primary);">premium Hospital Management System</strong> built using cutting-edge technologies:
+        </p>
+
+        <div class="row mt-4 mb-4">
+            <div class="col-md-6">
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><i class="fas fa-check-circle" style="color: var(--secondary);"></i> <strong>Backend:</strong> Django & Python</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--secondary);"></i> <strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--secondary);"></i> <strong>Framework:</strong> Bootstrap 4</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><i class="fas fa-check-circle" style="color: var(--secondary);"></i> <strong>Database:</strong> SQLite</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--secondary);"></i> <strong>Security:</strong> Django Authentication</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--secondary);"></i> <strong>Responsive:</strong> Mobile-First Design</li>
+                </ul>
+            </div>
+        </div>
+
+        <p style="font-size: 1rem; line-height: 1.8; color: var(--dark);">
+            Efficiently manage <strong>doctors, patients, and appointments</strong> with full CRUD operations (Create, Read, Update, Delete) 
+            in a clean, modern, and user-friendly interface.
+        </p>
+
+        <div class="alert alert-info mt-4" style="border-radius: 16px; background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1)); border: none;">
+            <i class="fas fa-info-circle"></i> <strong>Project Goal:</strong> Real-world backend + frontend integration for full-stack Django development.
+        </div>
+
+        <hr>
+
+        <p class="text-muted text-center mb-0">
+            <i class="fas fa-code"></i> Developed with passion for healthcare excellence
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'navigationbar.html' %}
+{% load static %}
+
+{% block body %}
+
+{% if error == "no" %}
+<script>
+    // Direct redirect to home page after login
+    window.location.href = "{% url 'home' %}";
+</script>
+{% endif %}
+
+{% if error == "yes" %}
+<script>
+    Swal.fire({
+        icon: 'error',
+        title: 'Login Failed',
+        text: 'Invalid Credentials. Please try again.',
+        confirmButtonColor: '#e74c3c'
+    });
+</script>
+{% endif %}
+
+<div class="container" style="min-height: 80vh; display: flex; align-items: center; justify-content: center;">
+    <div class="login-container">
+        <div class="text-center mb-4">
+            <i class="fas fa-hospital-user" style="font-size: 4rem; color: var(--primary);"></i>
+            <h2 style="color: var(--primary); font-weight: 800; margin-top: 1rem;">Admin Portal</h2>
+            <p style="color: var(--gray);">Secure access to management system</p>
+        </div>
+
+        <form method="post">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label><i class="fas fa-user"></i> Username</label>
+                <input type="text" class="form-control" name="uname" placeholder="Enter admin username" required>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fas fa-lock"></i> Password</label>
+                <input type="password" class="form-control" name="pwd" placeholder="Enter password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" style="margin-top: 2rem;">
+                <i class="fas fa-sign-in-alt"></i> Login to Dashboard
+            </button>
+        </form>
+        
+        <div class="text-center mt-4">
+            <small class="text-muted">Secure Admin Access Only</small>
+        </div>
+    </div>
+</div>
+
+<!-- SweetAlert2 for better alerts -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+{% endblock %}
