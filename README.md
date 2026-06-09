@@ -140,7 +140,7 @@ HospitalMangmt/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/Hospital-Management-System.git
+git clone https://github.com/sahil-kumar11/Hospital-Management-System.git
 ```
 
 ### Move to Project Directory
