@@ -263,7 +263,7 @@ The application consists of the following interfaces:
 
 ## 👨‍💻 Author
 
-**Developed by:** *Your Name*
+**Developed by:** *Sahil Kumar*
 
 This project was built as part of my learning journey in **Django Web Development** to strengthen my understanding of backend development and database-driven applications.
 
